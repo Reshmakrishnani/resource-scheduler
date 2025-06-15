@@ -1,0 +1,17 @@
+
+ <div class="resource-cell" *ngFor="let i of slots">
+      <!-- Placeholder slot -->
+ <app-appointment-block
+  *ngFor="let appt of appointment"
+  [title]="appt.resourceId"
+  [startTime]="appt.start"
+  [endTime]="appt.end"
+  [ngClass]="appt.type"
+  [style.top.px]="getTopOffset(appt.start)"
+  [style.height.px]="getHeight(appt.start, appt.end)">
+</app-appointment-block>
+
+  <app-current-time-indicator [startHour]="this.startHour"[endHour]="this.endHour"></app-current-time-indicator>
+
+    </div>
+

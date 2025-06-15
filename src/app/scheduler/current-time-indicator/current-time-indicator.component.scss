@@ -1,0 +1,20 @@
+.current-time-line{
+ position: absolute;
+      width: 100%;
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+}
+.red-line {
+      height: 2px;
+      background-color: red;
+      flex: 1;
+    }
+    .time-label {
+      background: red;
+      color: white;
+      padding: 0 4px;
+      margin-left: 4px;
+      border-radius: 4px;
+      font-size: 12px;
+    }

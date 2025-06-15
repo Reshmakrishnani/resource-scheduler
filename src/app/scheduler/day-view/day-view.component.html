@@ -1,0 +1,39 @@
+<div class="scheduler-wrapper">
+      <!-- Header -->
+      <div class="scheduler-header">
+        <h2>Appointments</h2>
+        <div class="scheduler-controls">
+          <button pButton label="Today" class="p-button-rounded p-button-text"></button>
+          <span class="date">Sunday 15 June</span>
+          <button pButton icon="pi pi-chevron-left" class="p-button-rounded p-button-text"></button>
+          <button pButton icon="pi pi-chevron-right" class="p-button-rounded p-button-text"></button>
+          <div class="right-buttons">
+            <button pButton label="Day" class="p-button-rounded p-button-sm p-button-secondary"></button>
+            <button pButton label="Week" class="p-button-rounded p-button-sm p-button-outlined"></button>
+            <button pButton icon="pi pi-plus" class="p-button-rounded p-button-sm p-button-primary"></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content Area -->
+      <div class="scheduler-grid">
+        <!-- Time Column -->
+        <div class="time-column">
+          <app-time-column [startHour]="startHour" [endHour]="endHour"></app-time-column>
+        </div>
+
+        <!-- Scrollable Resource Columns -->
+        <div class="resource-columns">
+          <div class="resource-header-row">
+            <div class="resource-header" *ngFor="let resource of resource">
+              <p-avatar icon="pi pi-user" shape="circle" size="large"></p-avatar>
+              <span>{{ resource.name }}</span>
+            </div>
+          </div>
+
+          <div class="resource-body-row">
+            <app-resource-column *ngFor="let resource of resource" [resource]="resource"[appointment]="appointment"></app-resource-column>
+          </div>
+        </div>
+      </div>
+    </div>

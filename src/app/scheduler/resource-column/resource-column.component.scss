@@ -1,0 +1,15 @@
+ .resource-cell {
+      height: 60px;
+      border-bottom: 1px solid #eee;
+    }
+:host {
+  display: block;
+  position: relative; /* allows absolute children (appointments) to position themselves */
+  border-left: 1px solid #ccc;
+  background-color: #fff;
+  min-width: 200px;
+  overflow: hidden;
+}
+
+
+
