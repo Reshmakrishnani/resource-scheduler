@@ -1,20 +1,26 @@
-.current-time-line{
- position: absolute;
-      width: 100%;
-      pointer-events: none;
-      display: flex;
-      align-items: center;
+.current-time-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  z-index: 10;
+  pointer-events: none;
 }
+
 .red-line {
-      height: 2px;
-      background-color: red;
-      flex: 1;
-    }
-    .time-label {
-      background: red;
-      color: white;
-      padding: 0 4px;
-      margin-left: 4px;
-      border-radius: 4px;
-      font-size: 12px;
-    }
+  width: 100%;
+  height: 2px;
+  background-color: red;
+}
+
+.time-label {
+  position: absolute;
+  left: 4px;
+  top: -16px;
+  font-size: 12px;
+  background-color: white;
+  color: red;
+  padding: 0 4px;
+  border: 1px solid red;
+  border-radius: 4px;
+}

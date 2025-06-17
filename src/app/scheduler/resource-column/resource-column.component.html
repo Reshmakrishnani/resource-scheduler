@@ -1,11 +1,13 @@
 
- <div class="resource-cell" *ngFor="let i of slots">
+ <div class="resource-cell">
+  <div class="time-slot" *ngFor="let slot of slots"></div>
       <!-- Placeholder slot -->
  <app-appointment-block
   *ngFor="let appt of appointment"
   [title]="appt.resourceId"
   [startTime]="appt.start"
   [endTime]="appt.end"
+  class="appointment-block"
   [ngClass]="appt.type"
   [style.top.px]="getTopOffset(appt.start)"
   [style.height.px]="getHeight(appt.start, appt.end)">

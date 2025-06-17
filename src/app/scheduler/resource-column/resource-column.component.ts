@@ -12,7 +12,7 @@ import { CurrentTimeIndicatorComponent } from '../current-time-indicator/current
     CurrentTimeIndicatorComponent
   ],
   templateUrl: './resource-column.component.html',
-  styleUrl: './resource-column.component.scss'
+  styleUrl: './resource-column.component.scss',
 })
 export class ResourceColumnComponent {
  @Input() resource!: Resource;

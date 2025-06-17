@@ -19,20 +19,21 @@
       <div class="scheduler-grid">
         <!-- Time Column -->
         <div class="time-column">
+          <div class="time-header-spacer"></div>
           <app-time-column [startHour]="startHour" [endHour]="endHour"></app-time-column>
         </div>
 
         <!-- Scrollable Resource Columns -->
         <div class="resource-columns">
           <div class="resource-header-row">
-            <div class="resource-header" *ngFor="let resource of resource">
+            <div class="resource-header" *ngFor="let res of resource">
               <p-avatar icon="pi pi-user" shape="circle" size="large"></p-avatar>
-              <span>{{ resource.name }}</span>
+              <span>{{ res.name }}</span>
             </div>
           </div>
 
           <div class="resource-body-row">
-            <app-resource-column *ngFor="let resource of resource" [resource]="resource"[appointment]="appointment"></app-resource-column>
+            <app-resource-column *ngFor="let res of resource" [resource]="res"[appointment]="appointment"></app-resource-column>
           </div>
         </div>
       </div>

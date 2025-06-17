@@ -1,6 +1,7 @@
  .resource-cell {
-      height: 60px;
-      border-bottom: 1px solid #eee;
+       position: relative;
+  height: 720px; /* 12 hours x 60px or as needed */
+  border-left: 1px solid #ddd;
     }
 :host {
   display: block;
@@ -11,5 +12,28 @@
   overflow: hidden;
 }
 
+.time-slot {
+  height: 60px;
+  border-bottom: 1px solid #726666;
+  background: repeating-linear-gradient(
+    -45deg,
+    #1e1a1a,
+    #332d2d 6px,
+    #2c2727 6px,
+    #3c3232 12px
+  );
+}
 
-
+.appointment-block {
+  position: absolute;
+  left: 5px;
+  right: 5px;
+  background-color: #e6d0f5; /* Light purple */
+  border: 1px solid #b48dd3;
+  border-radius: 6px;
+  padding: 6px 8px;
+  box-sizing: border-box;
+  color: #333;
+  font-size: 13px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}

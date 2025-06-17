@@ -1,48 +1,24 @@
-
-:host {
-  position: absolute; /* critical for positioning by top/height */
-  left: 4px;
-  right: 4px;
+.appointment-block {
+  position: absolute;
+  left: 5px;
+  right: 5px;
+  background-color: #e6d0f5; /* Light purple */
+  border: 1px solid #b48dd3;
   border-radius: 6px;
-  font-size: 12px;
-  padding: 4px 6px;
-  background-color: #f3e5f5;
-  border: 1px solid #9c27b0;
+  padding: 6px 8px;
+  box-sizing: border-box;
   color: #333;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  z-index: 10;
-  white-space: normal;
-  word-break: break-word;
-  line-height: 1.2;
+  font-size: 13px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-:host(.booked) {
-      background-color: #f3e5f5;
-      border: 1px solid #9c27b0;
-      color: #333;
-    }
-    :host(.unavailable) {
-      background: repeating-linear-gradient(
-        45deg,
-        #ddd,
-        #ddd 10px,
-        #ccc 10px,
-        #ccc 20px
-      );
-      border: 1px solid #999;
-    }
+.content .title {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
 
-
-    .title {
-      font-weight: bold;
-    }
-
-    .client {
-      font-style: italic;
-      font-size: 11px;
-    }
-
-    .time {
-      font-size: 10px;
-      color: #555;
-    }
+.content .time {
+  font-size: 12px;
+  color: #555;
+}
